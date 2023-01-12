@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+
+    <id>lama2</id>
+
+    <version>1.0.0</version>
+
+    <title>Lama2 (Install)</title>
+    <authors>Hexmos</authors>
+
+    <packageSourceUrl>https://github.com/HexmosTech/Lama2</packageSourceUrl>
+    <releaseNotes>https://github.com/HexmosTech/Lama2</releaseNotes>
+    <iconUrl>https://hexmos.com/banner.png</iconUrl>
+    <licenseUrl>https://github.com/HexmosTech/Lama2/blob/main/LICENSE</licenseUrl> 
+    <docsUrl>https://hexmos.com/lama2/index.html</docsUrl>
+    <bugTrackerUrl>https://github.com/HexmosTech/Lama2/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/HexmosTech/Lama2</projectSourceUrl>
+
+    <projectUrl>https://hexmos.com/lama2/index.html</projectUrl>
+    <tags>API REST</tags>
+    <summary>Plain-Text Powered REST API Client</summary>
+    <description>Lama2 is a Plain-Text powered REST API client and manager built for serious engineering teams. Lama2 specifies the .l2 syntax for describing APIs, and implements a CLI to execute .l2 files. Engineers can collaborate on .l2 files using version control. Lama2 integrates nicely with IDEs and text-editors as well. Think of Lama2 as markdown for APIs.</description>
+    <dependencies>
+      <dependency id="httpie" version="3.2.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
