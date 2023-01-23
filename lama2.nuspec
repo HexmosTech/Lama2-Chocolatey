@@ -4,12 +4,12 @@
 
     <id>lama2</id>
 
-    <version>1.0.0</version>
+    <version>1.2.2</version>
 
     <title>Lama2 (Install)</title>
     <authors>Hexmos</authors>
 
-    <packageSourceUrl>https://github.com/HexmosTech/Lama2</packageSourceUrl>
+    <packageSourceUrl>https://github.com/HexmosTech/Lama2-Chocolatey</packageSourceUrl>
     <releaseNotes>https://github.com/HexmosTech/Lama2</releaseNotes>
     <iconUrl>https://hexmos.com/banner.png</iconUrl>
     <licenseUrl>https://github.com/HexmosTech/Lama2/blob/main/LICENSE</licenseUrl> 
