@@ -1,44 +1,8 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$lamaUrl = python -c "
-import struct
-import json
-import http.client
 
-def get_file():
-    conn = http.client.HTTPSConnection('api.github.com')
-    payload = ''
-    headers = {
-        'User-Agent': 'Hexmos'
-    }
-    conn.request('GET', '/repos/HexmosTech/Lama2/releases/latest', payload, headers)
-    res = conn.getresponse()
-    data = res.read()
-    return json.loads(data.decode('utf-8'))
-
-def get_platform():
-    platform = 8*struct.calcsize('P')
-    return 'amd64' if platform == 64 else '386'
-
-def search(files, platform):
-    search_string = 'windows-' + platform
-    for row in files['assets']:
-        if search_string in row['name'] and 'md5' not in row['name']:
-            return row['browser_download_url']            
-
-def main():
-    files = get_file()
-    platform = get_platform()
-    download_link = search(files, platform)
-    return download_link
-
-if __name__ == '__main__':
-    link = main()
-    print(link)
-" | Out-String
-
-$url        = $lamaUrl 
-$url64      = $lamaUrl 
+$url        = 'https://github.com/HexmosTech/Lama2/releases/download/v1.2.2/l2-v1.2.2-windows-386.zip'
+$url64      = 'https://github.com/HexmosTech/Lama2/releases/download/v1.2.2/l2-v1.2.2-windows-amd64.zip'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -46,9 +10,9 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
 
-  checksum      = ''
+  checksum      = '464E720F6F5C383B7FD3E670083717F06D7278729F7F3BF4257239D1F59A425D'
   checksumType  = 'sha256' 
-  checksum64    = ''
+  checksum64    = 'A12961F5C6C61142FEF7D774C8F0CF41CCC5E29E81C64CAE82C621D8CE97EDF8'
   checksumType64= 'sha256' 
 
 }
