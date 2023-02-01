@@ -1,8 +1,8 @@
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url        = 'https://github.com/HexmosTech/Lama2/releases/download/v1.2.2/l2-v1.2.2-windows-386.zip'
-$url64      = 'https://github.com/HexmosTech/Lama2/releases/download/v1.2.2/l2-v1.2.2-windows-amd64.zip'
+$url        = 'https://github.com/HexmosTech/Lama2/releases/download/v1.3.2/l2-v1.3.2-windows-386.zip'
+$url64      = 'https://github.com/HexmosTech/Lama2/releases/download/v1.3.2/l2-v1.3.2-windows-amd64.zip'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -10,9 +10,9 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
 
-  checksum      = '464E720F6F5C383B7FD3E670083717F06D7278729F7F3BF4257239D1F59A425D'
+  checksum      = 'DE0122AE3EAFA1EBD46759C480ED114E2E416269A7541242FCC51DB17506FC8F'
   checksumType  = 'sha256' 
-  checksum64    = 'A12961F5C6C61142FEF7D774C8F0CF41CCC5E29E81C64CAE82C621D8CE97EDF8'
+  checksum64    = 'BEFCFD56E138C4C274FCA7659C0FDF73C97977C582C2392E8FE59C1919F90F95'
   checksumType64= 'sha256' 
 
 }
