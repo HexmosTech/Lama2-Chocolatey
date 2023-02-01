@@ -4,7 +4,7 @@
 
     <id>lama2</id>
 
-    <version>1.2.2</version>
+    <version>1.3.2</version>
 
     <title>Lama2 (Install)</title>
     <authors>Hexmos</authors>
@@ -21,9 +21,6 @@
     <tags>API REST</tags>
     <summary>Plain-Text Powered REST API Client</summary>
     <description>Lama2 is a Plain-Text powered REST API client and manager built for serious engineering teams. Lama2 specifies the .l2 syntax for describing APIs, and implements a CLI to execute .l2 files. Engineers can collaborate on .l2 files using version control. Lama2 integrates nicely with IDEs and text-editors as well. Think of Lama2 as markdown for APIs.</description>
-    <dependencies>
-      <dependency id="httpie" version="3.2.1" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
